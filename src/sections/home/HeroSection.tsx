@@ -7,15 +7,15 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-hero overflow-hidden" id="hero">
       {/* Animated background elements */}
-      <div className="absolute inset-0 grid-bg opacity-30" />
-      <div className="absolute top-20 right-10 w-96 h-96 bg-gold-400/5 rounded-full blur-3xl animate-pulse-glow" />
-      <div className="absolute bottom-20 left-10 w-80 h-80 bg-gold-400/3 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '2s' }} />
+      <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
+      <div className="absolute top-20 right-10 w-96 h-96 bg-gold-400/5 rounded-full blur-3xl animate-pulse-glow pointer-events-none" />
+      <div className="absolute bottom-20 left-10 w-80 h-80 bg-gold-400/3 rounded-full blur-3xl animate-pulse-glow pointer-events-none" style={{ animationDelay: '2s' }} />
 
       {/* Floating geometric shapes */}
-      <motion.div animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }} transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }} className="absolute top-1/4 right-1/4 w-20 h-20 border border-gold-400/20 rounded-2xl hidden lg:block" />
-      <motion.div animate={{ y: [0, 10, 0], rotate: [0, -5, 0] }} transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }} className="absolute bottom-1/3 right-1/3 w-12 h-12 border border-white/10 rounded-full hidden lg:block" />
+      <motion.div animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }} transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }} className="absolute top-1/4 right-1/4 w-20 h-20 border border-gold-400/20 rounded-2xl hidden lg:block pointer-events-none" />
+      <motion.div animate={{ y: [0, 10, 0], rotate: [0, -5, 0] }} transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }} className="absolute bottom-1/3 right-1/3 w-12 h-12 border border-white/10 rounded-full hidden lg:block pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-0">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-0">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
           <div>
@@ -104,7 +104,7 @@ export default function HeroSection() {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent pointer-events-none" />
     </section>
   );
 }
