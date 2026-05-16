@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import Button from '../ui/Button';
 
@@ -51,10 +52,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group" id="nav-logo">
               <div className="relative w-10 h-10">
-                <div className="absolute inset-0 bg-gradient-to-br from-gold-400 to-gold-300 rounded-lg transform group-hover:rotate-6 transition-transform duration-300" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-navy-900 font-bold text-lg">B</span>
-                </div>
+                <Image src="/logo.png" alt="BrightPath Logo" fill className="object-contain" priority />
               </div>
               <div className="flex flex-col">
                 <span

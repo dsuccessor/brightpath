@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const footerLinks = {
   company: [
@@ -31,8 +32,8 @@ export default function Footer() {
           {/* Brand */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-gold-400 to-gold-300 rounded-lg flex items-center justify-center">
-                <span className="text-navy-900 font-bold text-lg">B</span>
+              <div className="relative w-10 h-10">
+                <Image src="/logo.png" alt="BrightPath Logo" fill className="object-contain" />
               </div>
               <div className="flex flex-col">
                 <span className="text-lg font-bold leading-tight">BrightPath</span>
